@@ -4,15 +4,16 @@ $template = file_get_contents("test.html");
 
 $component_name = "Hello_World";
 
-require "../components/{$component_name}/comp.php";
-$component_html = file_get_contents("../components/{$component_name}/comp.html");
-$component_css = file_get_contents("../components/{$component_name}/comp.css");
-$component_js = file_get_contents("../components/{$component_name}/comp.js");
+$component_html = require("../../components/{$component_name}/comp.php");
+$component_css = "<link rel=\"stylesheet\" href=\"../../components/{$component_name}/comp.css\"/>";
+$component_js = "<script type=\"text/javascript\" src=\"../../components/{$component_name}/comp.js\"></script>";
 
 
 
-$page = str_replace('{component}', $component_html, $template);
+$page = str_replace('{component_css}', $component_css, $template);
+$page = str_replace('{component}', $component_html, $page);
+$page = str_replace('{component_js}', $component_js, $page);
+
 
 echo $page;
 
-// <div >Hello, world!</div>
