@@ -14,9 +14,7 @@ $component_name = "Hello_World";
 $component_dir = COMPONENTS_DIR . $component_name . "/";
 
 require(COMPONENTS_DIR . $component_name . "/comp.php");
-// $component_css = COMPONENTS_DIR . $component_name . "/comp.css";
 $component_css = "<link rel=\"stylesheet\" href=\"/components/{$component_name}/comp.css\"/>";
-// $component_js = COMPONENTS_DIR . $component_name . "/comp.js";
 $component_js = "<script type=\"text/javascript\" src=\"/components/{$component_name}/comp.js\"></script>";
 
 
