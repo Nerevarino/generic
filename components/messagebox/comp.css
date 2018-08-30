@@ -1,0 +1,7 @@
+.comp_messagebox {
+    display:block;
+    width:50em;
+    height:50em;
+    padding:5em;
+    background-color:black;
+}
