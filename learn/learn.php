@@ -3,10 +3,21 @@
 
 
 //Включить зависимости
-// class Message
-// {
-//     protected $template = 
-// }
+class Message
+{
+    protected $text = '';    
+    
+    public function __construct($text)
+    {
+        $this->text = $text;
+    }
+
+    public function __toString()
+    {
+        $html = '';
+        
+    }
+}
 
 //Стили и скрипты страницы
 $style_file = "learn.css";
