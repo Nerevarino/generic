@@ -1,8 +1,10 @@
 .comp_messagebox {
+    box-sizing:border-box;
     display:block;
-    width:30em;
-    height:30em;
-    padding:5em;
+    width:15em;
+    height:15em;
+    padding:2em;
+    border-radius:2em;
     background-color:grey;
     /* text-align:center; */
 }

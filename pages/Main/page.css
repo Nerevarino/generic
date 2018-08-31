@@ -1,0 +1,33 @@
+body, html {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-color:lightblue;
+    position:relative;
+}
+
+#ltbox {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#rtbox {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#rbbox {
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+#lbbox {
+    position:absolute;
+    left:0;
+    bottom:0;
+}
