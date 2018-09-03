@@ -13,6 +13,7 @@ class Page
         if (isset($_POST['data'])) {
             $this->input_data = json_decode($_POST['data']);
             static::processInputData();
+            echo json_encode($this->output_data);
         } else {
             static::prepare();
             echo $this;
