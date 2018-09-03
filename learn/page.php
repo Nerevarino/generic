@@ -37,9 +37,30 @@ TEMPLATE;
         }
     }
 
-    public function __toString()
+    protected function get()
+    {
+        $this->prepare();
+        echo $this;
+    }
+
+    protected function read()
+    {
+        
+    }
+
+    protected function write()
+    {
+        
+    }
+
+    protected function prepare()
     {
         $greetings = "Привет от PHP!";
+    }
+    
+    public function __toString()
+    {
+        
         $places = array
         (
             '{styles}', '{greetings}', '{scripts}'   
