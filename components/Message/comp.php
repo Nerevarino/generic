@@ -8,19 +8,19 @@ class Message
     protected $script = '';    
     protected $content = '';
 
-    protected static function getThisFileContent($filename)
+    protected static function loadCode($filename)
     {
         return file_get_contents(COMPONENTS_DIR . self::class . "/" . $filename);
     }
     
     public function __construct(string $data)
     {
-        $this->style = self::getThisFileContent("comp.css");
-        $this->script = self::getThisFileContent("comp.js");
-        $template = self::getThisFileContent("comp.html");
+        $this->style = self::loadCode("comp.css");
+        $this->script = self::loadCode("comp.js");
+        $template = self::loadCode("comp.html");
         $this->content = str_replace
         (
-            '{data}',
+            '{message}',
             $data,
             $template
         );

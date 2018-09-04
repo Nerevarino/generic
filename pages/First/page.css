@@ -1,0 +1,41 @@
+html, body {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    background-color:grey;
+    box-sizing:border-box;
+    position:relative;
+}
+
+#ltbox {
+    display:inline-block;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:lightblue;
+}
+
+#rtbox {
+    display:inline-block;
+    position:absolute;
+    right:0;
+    top:0;
+    background-color:yellow;
+}
+
+#rbbox {
+    display:inline-block;
+    position:absolute;
+    right:0;
+    bottom:0;
+    background-color:orange;
+}
+
+#lbbox {
+    display:inline-block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    background-color:green;
+}
