@@ -3,22 +3,16 @@ require_once("../../core/conf.php");
 
 class TestComponent
 {
-    protected function loadCode($filename)
-    {
-        return file_get_contents(COMPONENTS_DIR . self::class . "/" . $filename);
-    }
+    protected $html;
+    protected $css;
+    protected $js;
     
-    public function __construct(string $data)
+    public function __construct()
     {
-        $style = $this->loadCode("comp.css");
-        $script = $this->loadCode("comp.js");
-        $template = $this->loadCode("comp.html");
-        $this->content = str_replace
-        (
-            '{message}',
-            $data,
-            $template
-        );
+        $html = file_get_contents("comp.html");
+        $css = file_get_contents("comp.css");
+        $js = file_get_contents("comp.js");
+
+        
     }
-    
 }

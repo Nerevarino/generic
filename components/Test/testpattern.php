@@ -25,16 +25,15 @@ $components_holder = "(?<components_holder>\{$components_name\($components_subda
 $pattern = "/$data_holder|$component_holder|$components_holder/s";
 
 preg_match_all($pattern, file_get_contents("comp.html"), $matches, PREG_UNMATCHED_AS_NULL);
-$matches = array
-(
-    'data_holder' => array_filter($matches['data_holder'], "not_null"),
-    'data_name' => array_filter($matches['data_name'], "not_null"),
+  $data_holder = array_filter($matches['data_holder'], "not_null");
+  $data_name = array_filter($matches['data_name'], "not_null");
+  
+  $component_name = array_filter($matches['component_name'], "not_null");
+  $component_subdata_name = array_filter($matches['component_subdata_name'], "not_null");
+  $component_holder = array_filter($matches['component_holder'], "not_null");
 
-    'component_name' => array_filter($matches['component_name'], "not_null"),
-    'component_subdata_name' => array_filter($matches['component_subdata_name'], "not_null"),
-    'component_holder' => array_filter($matches['component_holder'], "not_null"),
+  $components_name = array_filter($matches['components_name'], "not_null");
+  $components_subdata_name = array_filter($matches['components_subdata_name'], "not_null");
+  $components_holder = array_filter($matches['components_holder'], "not_null");
 
-    'components_name' => array_filter($matches['components_name'], "not_null"),
-    'components_subdata_name' => array_filter($matches['components_subdata_name'], "not_null"),
-    'components_holder' => array_filter($matches['components_holder'], "not_null")
-);
+var_dump($data_holder);
